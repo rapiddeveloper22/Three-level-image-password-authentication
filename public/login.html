@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threee level authentication</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://localhost:3001/node_modules/sjcl-full/sjcl.js"></script>
+    <style>
+        a {
+            margin-top: 20px;
+            margin-left: 650px;
+            display: block;
+            width: 115px;
+            height: 25px;
+            background: #4E9CAF;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            line-height: 25px;
+        }
+
+        .signUp {
+            margin-top: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #luname,
+        #lpass,
+        .g-recaptcha {
+            padding-left: 550px;
+        }
+
+        .g-recaptcha {
+            margin-top: 20px;
+        }
+
+        #uname,
+        #pass {
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+
+        img {
+            margin-top: 30px;
+            margin-left: 480px;
+        }
+
+        button {
+            padding: 8px;
+            margin-top: 20px;
+            margin-left: 670px;
+        }
+
+        canvas {
+            margin-top: 20px;
+            margin-left: 500px;
+        }
+    </style>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+    <div class="logIn">
+        <h1 id="heading">Log in</h1>
+        <label id="luname" for="uname">Username</label>
+        <input type="text" id="uname" name="uname"><br>
+
+        <label id="lpass" for="pass">Password</label>
+        <input type="password" id="pass" name="lpass"><br>
+
+        <div class="g-recaptcha" data-sitekey="6Ldyh9ciAAAAAIuNNklg-MQI802d2HQyMlBnLQXk"></div>
+
+        <img id="image" src="http://localhost:3001/public/Images/image1.jpg" width="400" height="400" alt="Image"
+            usemap="#im" style="display: none;">
+        <canvas id="canvas" width="400" height="400" style="border: 1px solid black"></canvas>
+        <br>
+        <button type="button">Log in</button><br>
+
+        <button id="next" type="button">Next</button>
+    </div>
+    <!-- <script src="http://localhost:3001/public/algorithm.js"></script> -->
+    <script src="http://localhost:3001/public/login.js"></script>
+</body>
+
+</html>
